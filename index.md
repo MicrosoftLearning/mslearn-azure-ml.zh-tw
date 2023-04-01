@@ -8,7 +8,7 @@ layout: home
 
 下列實際操作練習旨在支援 [Microsoft Learn](https://docs.microsoft.com/training/) 訓練。
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions'" %}
+{% 指派實驗室 = site.pages | where_exp：「page」， 「page.url 包含 '/Instructions'」 %}
 | |
 | --- | --- | 
 {% for activity in labs  %}| [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
