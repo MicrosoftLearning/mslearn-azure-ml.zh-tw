@@ -1,8 +1,8 @@
-## Azure 機器學習 的實作練習 （v2）
+## 適用于 Azure 機器學習 的實作練習 （v2）
 
-此存放庫包含 Microsoft Learning Path 探索 Azure 機器學習 的實作實驗室練習。 學習路徑是由 Microsoft Learn 上的自我步調課程模組所組成。 這些實驗室旨在配合學習教材，讓您能夠使用其中描述的技術來練習。
+此存放庫包含探索 Azure 機器學習的 Microsoft Learning Path 實際操作實驗室練習。 學習路徑是由 Microsoft Learn 上的自我步調課程模組所組成。 這些實驗室旨在配合學習教材，讓您能夠使用其中描述的技術來練習。
 
-您可以在 檢視實驗室練習的 [https://microsoftlearning.github.io/mslearn-azure-ml/](https://microsoftlearning.github.io/mslearn-azure-ml/)指示。
+您可以在 檢視實驗室練習的 [ https://microsoftlearning.github.io/mslearn-azure-ml/ ](https://microsoftlearning.github.io/mslearn-azure-ml/) 指示。
 
 ## 我們要做什麼？
 
@@ -12,6 +12,6 @@
 
 ## 我要怎麼參與？
 
-- 任何人都可以將提取要求提交至 GitHub 存放庫中的程式代碼或內容，Microsoft 和課程作者會視需要分級並包含內容和實驗室程式代碼變更。
+- 任何人都可以將提取要求提交至 GitHub 存放庫中的程式碼或內容，Microsoft 和課程作者會視需要分級並包含內容和實驗室程式碼變更。
 
 - 可以提交 bug、變更、改進和想法。  在我們有之前尋找新的 Azure 功能嗎？  提交新的示範！
