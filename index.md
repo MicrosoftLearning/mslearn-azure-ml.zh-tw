@@ -6,7 +6,7 @@ layout: home
 
 # Microsoft Learn - 實際操作練習
 
-下列實際操作練習旨在支援 [Microsoft Learn](https://docs.microsoft.com/training/) 訓練。
+下列實際操作練習旨在支援 [ Microsoft Learn ](https://docs.microsoft.com/training/) 訓練。
 
 {% 指派實驗室 = site.pages | where_exp：「page」， 「page.url 包含 '/Instructions'」 %}
 | |
