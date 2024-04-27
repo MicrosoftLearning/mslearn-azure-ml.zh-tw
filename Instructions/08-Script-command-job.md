@@ -15,7 +15,7 @@ lab:
 
 ## 佈建 Azure Machine Learning 工作區
 
-Azure 機器學習 *工作區*提供一個集中位置，用於管理您需要定型和管理模型的所有資源和資產。 您可以透過 Studio、Python SDK 和 Azure CLI 與 Azure 機器學習 工作區互動。
+Azure 機器學習 *工作區*提供集中位置來管理您需要定型和管理模型的所有資源和資產。 您可以透過 Studio、Python SDK 和 Azure CLI 與 Azure 機器學習 工作區互動。
 
 您將使用 Azure CLI 來佈建工作區和必要的計算，並使用 Python SDK 來執行命令作業。
 
@@ -49,9 +49,9 @@ Azure 機器學習 *工作區*提供一個集中位置，用於管理您需要�
 
 ## 複製實驗室材料
 
-當您建立工作區和必要的計算資源時，您可以開啟 Azure Machine Learning 工作室，並將實驗室材料複製到工作區。
+當您建立工作區和必要的計算資源時，您可以開啟 Azure Machine Learning 工作室 並將實驗室數據複製到工作區。
 
-1. 在 Azure 入口網站 中，流覽至名為 mlw-dp100-...** 的 **Azure 機器學習 工作區。
+1. 在 Azure 入口網站 中，流覽至名為 **mlw-dp100 的 Azure 機器學習 工作區-...**。
 1. 選取 Azure 機器學習 工作區，然後在其 [概觀] **頁面中，選取 [**啟動工作室**]。** 另一個索引標籤會在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。
 1. 關閉任何出現在 Studio 中的彈出視窗。
 1. 在 Azure Machine Learning 工作室 內，流覽至 **[計算**] 頁面，並確認您在上一節中建立的計算實例和叢集是否存在。 計算實例應該正在執行，叢集應該閑置，且有0個節點正在執行。
@@ -114,9 +114,10 @@ Azure 機器學習 *工作區*提供一個集中位置，用於管理您需要�
 
     若要成功執行文稿，您必須指定定型資料參數的值。 讓我們藉由參考 **儲存在定型腳本相同資料夾中的 diabetes.csv** 檔案來執行此動作。
 
-1. 在終端機中執行下列命令：
+1. 在終端中，執行下列命令：
 
     ```
+    cd azure-ml-labs/Labs/08/src/
     python train-model-parameters.py --training_data diabetes.csv
     ```
 
@@ -142,7 +143,7 @@ Azure 機器學習 *工作區*提供一個集中位置，用於管理您需要�
 
 ## 刪除 Azure 資源
 
-當您完成探索 Azure 機器學習 時，應該刪除您所建立的資源，以避免不必要的 Azure 成本。
+當您完成探索 Azure 機器學習 時，應該刪除您建立的資源，以避免不必要的 Azure 成本。
 
 1. 關閉 [Azure Machine Learning 工作室] 索引標籤，並返回 Azure 入口網站。
 1. 在 Azure 入口網站的 [首頁]**** 上，選取 [資源群組]****。
