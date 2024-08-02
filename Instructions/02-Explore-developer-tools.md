@@ -27,8 +27,8 @@ lab:
 
 1. 在瀏覽器中，開啟位於 `https://portal.azure.com/` 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 1. 選取頁面頂端搜尋方塊右邊的 \[>_] (*Cloud Shell*) 按鈕。 這會在入口網站底部開啟 Cloud Shell 窗格。
-1. 如有要求，請選取 [Bash]****。 第一次開啟 Cloud Shell 時，系統會要求您選擇要使用的殼層類型 (*Bash* 或 *PowerShell*)。
-1. 如果系統要求您為 Cloud Shell 建立儲存體，請檢查已指定正確的訂用帳戶，然後選取 [建立儲存體]****。 等候儲存體建立完成。
+1. 若系統詢問，請選取 [Bash]****。 第一次開啟 Cloud Shell 時，系統會要求您選擇要使用的殼層類型 ([Bash]** 或 [PowerShell]**)。
+1. 檢查是否已指定正確的訂用帳戶，並 **選取 [不需要** 記憶體帳戶]。 選取**套用**。
 1. 使用以下命令，移除任何 ML CLI 延伸模組 (第 1 版和 2 版)，以避免與舊版發生任何衝突：
     
     ```azurecli
@@ -40,7 +40,7 @@ lab:
 
     > 忽略表示未安裝延伸模組的任何 (錯誤) 訊息。
 
-1. 使用下列命令安裝 Azure Machine Learning (v2) 延伸模組：
+1. 使用下列命令安裝 Azure Machine Learning (v2) 延伸模組:
     
     ```azurecli
     az extension add -n ml -y
@@ -110,9 +110,9 @@ lab:
 雖然 Azure CLI 很適合自動化，但您可能想檢閱您所執行命令的輸出。 您可以使用 Azure Machine Learning 工作室來檢查是否已建立資源和資產，以及檢查是否成功執行作業，或檢閱作業失敗的原因。 
 
 1. 在 Azure 入口網站中，瀏覽至名為 **mlw-dp100-labs** 的 Azure Machine Learning 工作區。
-1. 選取 Azure Machine Learning 工作區，然後在其 [概觀]**** 頁面中，選取 [啟動工作室]****。 另一個索引標籤會在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。
+1. 選取 Azure Machine Learning 工作區，然後在其 [概觀]**** 頁面中，選取 [啟動工作室]****。 另一個索引標籤將在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。
 1. 關閉任何出現在工作室中的快顯視窗。
-1. 在 Azure Machine Learning 工作室中，瀏覽至 [計算]**** 頁面，並確認您在上一個節中建立的計算執行個體和叢集是否存在。 計算執行個體應該正在執行，叢集應該閒置，而且有 0 個節點正在執行。
+1. 在 Azure Machine Learning 工作室中，瀏覽至 [計算]**** 頁面，並驗證您在上一節中建立的計算執行個體和叢集是否存在。 計算執行個體應該正在執行，叢集應該閒置，而且有 0 個節點正在執行。
 
 ## 使用 Python SDK 來定型模型
 
@@ -126,7 +126,7 @@ lab:
     pip install azure-ai-ml
     ```
 
-    > 忽略表示未安裝套件的任何 (錯誤) 訊息。
+    > 略過表示未安裝套件的任何 (錯誤) 訊息。
 
 1. 執行下列命令，將包含筆記本、資料和其他檔案的 Git 存放庫複製到您的工作區：
 
@@ -162,7 +162,7 @@ lab:
 
 ## 刪除 Azure 資源
 
-當您完成探索 Azure Machine Learning 時，應該刪除您所建立的資源，以避免不必要的 Azure 成本。
+當您完成探索 Azure Machine Learning 時，應該刪除您所建立的資源，以避免產生不必要的 Azure 成本。
 
 1. 關閉 [Azure Machine Learning 工作室] 索引標籤，然後返回 Azure 入口網站。
 1. 在 Azure 入口網站的 [首頁]**** 上，選取 [資源群組]****。
