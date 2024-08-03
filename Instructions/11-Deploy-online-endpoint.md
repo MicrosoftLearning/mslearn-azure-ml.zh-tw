@@ -15,7 +15,7 @@ lab:
 
 ## 佈建 Azure Machine Learning 工作區
 
-Azure Machine Learning *工作區*會提供中央位置，用於管理您定型和管理模型所需的所有資源和資產。 您可以透過工作室、Python SDK 和 Azure CLI 與 Azure Machine Learning 工作區互動。 
+Azure Machine Learning 工作區** 會提供一個集中位置，用來管理您定型和管理模型所需的所有資源和資產。 您可以透過工作室、Python SDK 和 Azure CLI 與 Azure Machine Learning 工作區互動。 
 
 您將使用 Azure CLI 來佈建工作區和必要的計算，以及將使用 Python SDK 來執行命令作業。
 
@@ -23,10 +23,10 @@ Azure Machine Learning *工作區*會提供中央位置，用於管理您定型�
 
 若要建立 Azure Machine Learning 工作區、計算執行個體和計算叢集，您將使用 Azure CLI。 所有必要的命令會在殼層指令碼中進行分組，以供您執行。
 
-1. 在瀏覽器中，開啟位於 `https://portal.azure.com/` 的 Azure 入口網站，使用您的 Microsoft 帳戶登入其中。
+1. 在瀏覽器中，開啟位於 `https://portal.azure.com/` 的 Azure 入口網站，並使用您的 Microsoft 帳戶登入。
 1. 選取頁面頂端搜尋方塊右邊的 \[>_] (*Cloud Shell*) 按鈕。 這會在入口網站底部開啟 Cloud Shell 窗格。
-1. 如有要求，請選取 [Bash]****。 第一次開啟 Cloud Shell 時，會要求您選擇要使用的殼層類型 (*Bash* 或 *PowerShell*)。
-1. 如果要求您為 Cloud Shell 建立儲存體，請檢查是否已指定正確的訂用帳戶，然後選取 [建立儲存體]****。 等候儲存體建立完成。
+1. 若系統詢問，請選取 [Bash]****。 第一次開啟 Cloud Shell 時，系統會要求您選擇要使用的殼層類型 ([Bash]** 或 [PowerShell]**)。
+1. 檢查是否已指定正確的訂用帳戶，並 **選取 [不需要** 記憶體帳戶]。 選取**套用**。
 1. 在終端機中，輸入下列命令來複製此存放庫:
 
     ```azurecli
@@ -54,7 +54,7 @@ Azure Machine Learning *工作區*會提供中央位置，用於管理您定型�
 1. 在 Azure 入口網站中，瀏覽至名為 **mlw-dp100-...** 的 Azure Machine Learning 工作區。
 1. 選取 Azure Machine Learning 工作區，然後在其 [概觀]**** 頁面中，選取 [啟動工作室]****。 另一個索引標籤將在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。
 1. 關閉任何出現在工作室中的快顯視窗。
-1. 在 Azure Machine Learning 工作室中，瀏覽至 [計算]**** 頁面，並驗證您在上一個節中建立的計算執行個體和叢集是否存在。 計算執行個體應該正在執行、叢集應該閒置，而且有 0 個節點正在執行。
+1. 在 Azure Machine Learning 工作室中，瀏覽至 [計算]**** 頁面，並驗證您在上一節中建立的計算執行個體和叢集是否存在。 計算執行個體應該正在執行，叢集應該閒置，而且有 0 個節點正在執行。
 1. 在 [計算執行個體]**** 索引標籤中，尋找您的計算執行個體，然後選取 [終端機]**** 應用程式。
 1. 在終端機中，透過執行下列命令，在計算執行個體上安裝 Python SDK：
 
@@ -86,7 +86,7 @@ Azure Machine Learning *工作區*會提供中央位置，用於管理您定型�
 
 ## 刪除 Azure 資源
 
-當您完成探索 Azure Machine Learning 時，應該刪除您所建立的資源，以避免不必要的 Azure 成本。
+當您完成探索 Azure Machine Learning 時，應該刪除您所建立的資源，以避免產生不必要的 Azure 成本。
 
 1. 關閉 [Azure Machine Learning 工作室] 索引標籤，然後返回 Azure 入口網站。
 1. 在 Azure 入口網站的 [首頁]**** 上，選取 [資源群組]****。
