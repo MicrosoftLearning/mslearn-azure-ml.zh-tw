@@ -90,6 +90,13 @@ Azure Machine Learning 工作區** 會提供一個集中位置，用來管理您
 1. 選取筆記本頂端的 &#9655;&#9655; 圖示，以**儲存並執行終端機中的指令碼**。
 1. 指令碼是由 **python train-classification-model.py** 命令起始，且輸出應該會顯示在命令下方。
 
+   > **注意：** 如果腳本傳回 libstdc++6 的 ImportError，請在終端機中執行下列命令，然後再再次執行腳本：
+   > ```bash
+   > sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+   > sudo apt-get update
+   > sudo apt-get upgrade libstdc++6
+   > ```
+
 ## 使用終端機測試指令碼
 
 將筆記本轉換成指令碼之後，您可能需要進一步精簡。 使用指令碼時，其中一個最佳做法是使用函式。 當您的指令碼包含函式時，比較容易進行程式碼單元測試。 當您使用函式時，指令碼會由程式碼區塊組成，每個區塊都會執行特定工作。
