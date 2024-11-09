@@ -126,7 +126,7 @@ Azure Machine Learning **工作區** 提供一個集中位置，可用來管理�
 
 ## 刪除 Azure 資源
 
-當您完成探索 Azure Machine Learning 時，應該刪除您所建立的資源，以避免不必要的 Azure 成本。
+當您完成探索 Azure Machine Learning 時，應該刪除您所建立的資源，以避免產生不必要的 Azure 成本。
 
 1. 關閉 [Azure Machine Learning 工作室] 索引標籤，然後返回 Azure 入口網站。
 1. 在 Azure 入口網站的 [首頁]**** 上，選取 [資源群組]****。
