@@ -1,3 +1,11 @@
+#README
+
+We've turned off the ability to report issues directly on this repo and do not monitor PRs.
+
+Provide feedback here: https://aka.ms/provide-feedback
+
+Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
+
 ## 適用於 Azure Machine Learning 的實作練習 (v2)
 
 此存放庫包含探索 Azure Machine Learning 的 Microsoft Learning 路徑實際操作實驗室練習。 學習路徑是由 Microsoft Learn 上的自我步調課程模組所組成。 這些實驗室旨在配合學習教材，讓您能夠使用其中描述的技術來練習。
