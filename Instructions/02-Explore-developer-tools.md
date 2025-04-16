@@ -60,6 +60,26 @@ lab:
 
 1. 等候工作區及其相關聯的資源建立完成 - 這通常需要大約 5 分鐘的時間。
 
+    <details>  
+    <summary><b>疑難解答提示</b>：工作區建立錯誤</summary><br>
+    <p>如果您在透過 CLI 建立工作區時收到錯誤，您必須手動佈建資源：</p>
+    <ol>
+        <li>在 Azure 入口網站 首頁中，選取 [<b>+建立資源</b>]。</li>
+        <li>搜尋<i>機器學習</i>服務，然後選取 <b>[Azure 機器學習</b>]。 選取 <b>建立</b>。</li>
+        <li>使用下列設定建立新的 Azure Machine Learning 資源： <ul>
+                <li><b>訂用帳戶</b>：您的 Azure 訂用帳戶<i></i></li>
+                <li><b>資源群組</b>：rg-dp100-labs</li>
+                <li><b>工作區名稱</b>：mlw-dp100-labs</li>
+                <li><b>區域</b>：<i>選取最接近您所在位置的地理區域</i></li>
+                <li><b>儲存體帳戶</b>：記下將為您的工作區建立的預設新儲存體帳戶<i></i></li>
+                <li><b>金鑰保存庫</b>：記下將為您的工作區建立的預設新金鑰保存庫<i></i></li>
+                <li><b>Application Insights</b>：記下將為您的工作區建立的預設新 Application Insights 資源<i></i></li>
+                <li><b>容器登錄</b>：無 (在您第一次將模型部署到容器時，系統將會自動建立一個<i></i>)</li>
+            </ul>
+        <li>選取 <b>[檢閱 + 建立</b> ]，並等候工作區及其相關聯的資源建立 - 這通常需要大約 5 分鐘的時間。</li>
+    </ol>
+    </details>
+
 ## 使用 Azure CLI 建立計算執行個體
 
 定型機器學習模型所需基礎結構的另一個重要部分是**計算**。 雖然您可以在本機定型模型，但使用雲端計算會更具可調性和成本效益。
@@ -84,6 +104,19 @@ lab:
 
     如果您收到錯誤訊息，指出計算執行個體的名稱已經存在，請變更名稱，然後重試命令。
 
+    <details>  
+    <summary><b>疑難解答提示</b>：計算建立錯誤</summary><br>
+    <p>如果您在透過 CLI 建立計算實體時收到錯誤，您必須手動佈建資源：</p>
+    <ol>
+        <li>在 Azure 入口網站中，瀏覽至名為 <b>mlw-dp100-labs</b> 的 Azure Machine Learning 工作區。</li>
+        <li>選取 Azure Machine Learning 工作區，然後在其 [概觀]<b></b> 頁面中，選取 [啟動工作室]<b></b>。 另一個索引標籤將在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。</li>
+        <li>關閉在工作室中出現的任何快顯視窗。</li>
+        <li>在 Azure Machine Learning 工作室 內，流覽至 <b>[計算] 頁面，然後選取 [計算</b>實例] 索引<b>卷標下的 [+</b><b>新增]。</b></li>
+        <li>為計算實例指定唯一的名稱，然後選取 <b>Standard_DS11_v2</b> 做為虛擬機大小。</li>
+        <li>選取 [檢閱 + 建立]<b></b>，然後選取 [建立]<b></b>。</li>
+    </ol>
+    </details>
+
 ## 使用 Azure CLI 建立計算叢集
 
 雖然計算執行個體很適合用於開發，但是當我們想要定型機器學習模型時，計算叢集更適合。 只有在提交作業以使用計算叢集時，才會調整為 0 個以上的節點並執行作業。 一旦不再需要計算叢集，其會自動調整大小回 0 個節點，以將成本降到最低。 
@@ -104,6 +137,19 @@ lab:
     ```azurecli
     az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
+
+    <details>  
+    <summary><b>疑難解答提示</b>：計算建立錯誤</summary><br>
+    <p>如果您在透過 CLI 建立計算叢集時收到錯誤，您必須手動佈建資源：</p>
+    <ol>
+        <li>在 Azure 入口網站中，瀏覽至名為 <b>mlw-dp100-labs</b> 的 Azure Machine Learning 工作區。</li>
+        <li>選取 Azure Machine Learning 工作區，然後在其 [概觀]<b></b> 頁面中，選取 [啟動工作室]<b></b>。 另一個索引標籤將在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。</li>
+        <li>關閉在工作室中出現的任何快顯視窗。</li>
+        <li>在 Azure Machine Learning 工作室 中，流覽至 <b>[計算</b>] 頁面，然後選取 <b>+ [計算叢集] 索引<b>卷標下的 [</b>新增</b>]。</li>
+        <li>選擇與您建立工作區所在的區域相同，然後選取 <b>[Standard_DS11_v2</b> ] 作為虛擬機大小。 選取<b>下一個</b></li>
+        <li>為叢集提供唯一的名稱，然後選取 [ <b>建立</b>]。</li>
+    </ol>
+    </details>
 
 ## 使用 Azure Machine Learning 工作室設定工作站
 
