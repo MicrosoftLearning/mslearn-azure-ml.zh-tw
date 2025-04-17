@@ -47,6 +47,41 @@ Azure Machine Learning 工作區** 會提供一個集中位置，用來管理您
 
 1. 等候指令碼完成 - 這通常需要大約 5-10 分鐘的時間。
 
+    <details>
+    <summary><b>疑難解答提示</b>：工作區建立錯誤</summary><br>
+    <p>如果您在透過 CLI 執行安裝文稿時收到錯誤，您需要手動佈建資源：</p>
+    <ol>
+        <li>在 Azure 入口網站 首頁中，選取 [<b>+建立資源</b>]。</li>
+        <li>搜尋<i>機器學習</i>服務，然後選取 <b>[Azure 機器學習</b>]。 選取 <b>建立</b>。</li>
+        <li>使用下列設定建立新的 Azure Machine Learning 資源： <ul>
+                <li><b>訂用帳戶</b>：您的 Azure 訂用帳戶<i></i></li>
+                <li><b>資源群組</b>：rg-dp100-labs</li>
+                <li><b>工作區名稱</b>：mlw-dp100-labs</li>
+                <li><b>區域</b>：<i>選取最接近您所在位置的地理區域</i></li>
+                <li><b>儲存體帳戶</b>：記下將為您的工作區建立的預設新儲存體帳戶<i></i></li>
+                <li><b>金鑰保存庫</b>：記下將為您的工作區建立的預設新金鑰保存庫<i></i></li>
+                <li><b>Application Insights</b>：記下將為您的工作區建立的預設新 Application Insights 資源<i></i></li>
+                <li><b>容器登錄</b>：無 (在您第一次將模型部署到容器時，系統將會自動建立一個<i></i>)</li>
+            </ul>
+        <li>選取 <b>[檢閱 + 建立</b> ]，並等候工作區及其相關聯的資源建立 - 這通常需要大約 5 分鐘的時間。</li>
+        <li>選取 <b>[移至資源</b>]，然後在其 [概觀<b>] </b>頁面中，選取 [<b>啟動工作室</b>]。 另一個索引標籤將在瀏覽器中開啟，以開啟 Azure Machine Learning 工作室。</li>
+        <li>關閉在工作室中出現的任何快顯視窗。</li>
+        <li>在 Azure Machine Learning 工作室 中，流覽至 <b>[計算] 頁面，然後選取+ <b>[計算</b>實例] 索引<b>卷標下的 [</b>新增</b>]。</li>
+        <li>為計算實例指定唯一的名稱，然後選取 <b>Standard_DS11_v2</b> 做為虛擬機大小。</li>
+        <li>選取 [檢閱 + 建立]<b></b>，然後選取 [建立]<b></b>。</li>
+        <li>接下來，選取 [ <b>計算叢集] 索引標籤</b> ，然後選取 [ <b>+ 新增</b>]。</li>
+        <li>選擇與您建立工作區所在的區域相同，然後選取 <b>[Standard_DS11_v2</b> ] 作為虛擬機大小。 選取 [下一步]。</li>
+        <li>為叢集提供唯一的名稱，然後選取 [ <b>建立</b>]。</li>
+        <li>從下載定型數據 https://github.com/MicrosoftLearning/mslearn-azure-ml/raw/refs/heads/main/Labs/09/data/diabetes.csv</li>
+        <li>在 Azure Machine Learning 工作室 中，流覽至 <b>[數據]</b> 頁面，然後選取 [<b>+建立</b>]。</li>
+        <li>將數據資產 <b>命名為糖尿病數據</b> ，並確認已選取 [檔案] 類型 <b>[uri_file</b> ]。 選取 [下一步]。</li>
+        <li>選取 <b>[從本機檔案</b> ] 作為數據源，然後選取 [ <b>下一步</b>]。</li>
+        <li>確認<b>已選取 Azure Blob 儲存體</b> 和 <b>workspaceblobstore</b> 作為目的地記憶體類型和數據存放區。 選取 [下一步]。</li>
+        <li>上傳您先前下載的.csv檔案，然後選取 [ <b>下一步</b>]。</li>
+        <li>檢閱數據資產的設定，然後選取 [ <b>建立</b>]。</li>
+    </ol>
+    </details>
+
 ## 複製實驗室材料
 
 當您建立了工作區和必要的計算資源時，您可以開啟 Azure Machine Learning 工作室，並將實驗室材料複製到工作區。
